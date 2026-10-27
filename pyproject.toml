@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cdipetrin-injectprint"
+version = "0.1.0"
+description = "通过 Unicode 变体、零宽字符、同形异义字、指令覆盖等特征给提示词打注入指纹"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "cdipetrin" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://cdipetrin.github.io"
+Repository = "https://github.com/cdipetrin/injectprint"
+Issues = "https://github.com/cdipetrin/injectprint/issues"
+
+[project.scripts]
+injectprint = "injectprint:main"
+
+[tool.setuptools]
+py-modules = ["injectprint"]
